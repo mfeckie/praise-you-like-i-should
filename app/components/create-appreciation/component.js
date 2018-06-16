@@ -8,15 +8,14 @@ export default Component.extend({
   actions: {
     createAppreciation(event) {
       event.preventDefault();
-      const name = this.get("name")
-      const body = this.get("body")
-      const store = this.get("store")
+      const name = this.get("name");
+      const body = this.get("body");
+      const store = this.get("store");
       const appreciation = store.createRecord("appreciation", {
         name,
         body,
-      })
-      console.log(appreciation)
-      appreciation.save()
+      });
+      appreciation.save();
     }
   }
 });
